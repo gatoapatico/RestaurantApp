@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'smythe';
+    src: url(assets/fonts/Smythe-Regular.ttf);
+}
+
+/* Layout */
+
+body {
+    margin: 0;
+    font-family: 'smythe';
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    width: 600px;
+    border: 1px solid blue;
+    position: relative;
+    flex-direction: column;
+}
+
+.product {
+    display: flex;
+    gap: 29px;
+    border-bottom: 1px solid #dedede;
+    margin: 20px 33px;
+    width: 90%;
+    height: 140px;
+    box-sizing: border-box;
+}
+
+.title{
+    position: absolute;
+    color: white;
+    top: 31px;
+    left: 49px;
+}
+
+/* Typography */
+
+h1,h2,h3,h4,p {
+    margin: 0;
+}
+
+.emoji {
+    font-size: 70px;
+    width: 100px;
+    text-align: center;
+}
+
+.name {
+    font-size: 28px;
+}
+
+.ingredients {
+    font-size: 16px;
+    color: #8b8b8b;
+    margin-bottom: 7px;
+}
+
+.price {
+    font-size: 24px;
+}
+
+.btn-add{
+    font-size: 52px;
+    color: #8b8b8b;
+    padding: 0 15px;
+    border: 1px solid #dedede;
+    border-radius: 50%;
+    margin: 10px 0 auto auto;
+    background-color: white;
+}
+
+
+.p39 {
+    font-size: 39px;
+}
+
+.p23 {
+    font-size: 23px;
+}
+
+.mb7 {
+    margin-bottom: 7px;
+}
+
+/* IMG */
+
+header img {
+    width: 100%;;
+}
+
+
+
