@@ -64,7 +64,21 @@
             </div>
             <button class="btn-order">Complete order</button>
         </div>
+        <div class="container hidden">
+            <div class="success-box">
+                <p>Thanks, James! Your order is on its way!</p>
+            </div>
+        </div>
     </main>
+    <div class="modal-payout hidden">
+        <form action="" class="form-payout">
+            <p class="title-payout">Enter card details</p>
+            <input class="input-f" type="text" pattern="[a-zA-Z]+" placeholder="Enter your name" required>
+            <input class="input-f" type="text" pattern="[0-9]{16}" placeholder="Enter card number" required>
+            <input class="input-f" type="text" pattern="[0-9]{3}" placeholder="Enter CVV" required>
+            <button class="btn-order mt40">Pay</button>
+        </form>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
