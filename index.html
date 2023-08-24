@@ -17,52 +17,21 @@
         </div>
     </header>
     <main>
-        <div class="container">
-            <div class="product">
-                <p class="emoji">🍕</p>
-                <div>
-                    <p class="name">Pizza</p>
-                    <p class="ingredients">pepperoni, mushorom, mozarella</p>
-                    <p class="price">$14</p>
-                </div>
-                <button class="btn-add">+</button>
-            </div>
-            <div class="product">
-                <p class="emoji">🍔</p>
-                <div>
-                    <p class="name">Hamburguer</p>
-                    <p class="ingredients">beef, cheese, lettuce</p>
-                    <p class="price">$12</p>
-                </div>
-                <button class="btn-add">+</button>
-            </div>
-            <div class="product">
-                <p class="emoji">🍺</p>
-                <div>
-                    <p class="name">Beer</p>
-                    <p class="ingredients">grain, hops, yeast, water</p>
-                    <p class="price">$12</p>
-                </div>
-                <button class="btn-add">+</button>
-            </div>
+        <div class="container" id="productsPanel">
+            <!-- MENU -->
         </div>
-        <div class="container">
+        
+        <div class="container hidden" id="orders-container">
             <p class="p28 center mb33">Your order</p>
-            <div class="order">
-                <p class="name">Pizza</p>
-                <button class="btn-remove">remove</button>
-                <p class="price">$14</p>
+            <div id="orders">
+                <!-- ORDERS -->
             </div>
-            <div class="order">
-                <p class="name">Beer</p>
-                <button class="btn-remove">remove</button>
-                <p class="price">$12</p>
-            </div>
+
             <div class="order-resume">
                 <p class="name">Total price:</p>
-                <p class="price">$26</p>
+                <p class="price" id="total-price-el"></p>
             </div>
-            <button class="btn-order">Complete order</button>
+            <button class="btn-order" data-complete="complete">Complete order</button>
         </div>
         <div class="container hidden">
             <div class="success-box">
@@ -70,15 +39,15 @@
             </div>
         </div>
     </main>
-    <div class="modal-payout hidden">
-        <form action="" class="form-payout">
+    <div class="modal-payout hidden" id="modal-payout">
+        <form action="#" class="form-payout">
             <p class="title-payout">Enter card details</p>
             <input class="input-f" type="text" pattern="[a-zA-Z]+" placeholder="Enter your name" required>
             <input class="input-f" type="text" pattern="[0-9]{16}" placeholder="Enter card number" required>
             <input class="input-f" type="text" pattern="[0-9]{3}" placeholder="Enter CVV" required>
-            <button class="btn-order mt40">Pay</button>
+            <button class="btn-order mt40" data-pay="pay">Pay</button>
         </form>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
 </body>
 </html>
