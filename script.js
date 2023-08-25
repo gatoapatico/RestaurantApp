@@ -18,18 +18,10 @@ document.addEventListener('click', function(e){
     else if(e.target.dataset.complete){
         handleBtnComplete();
     }
-    else if(e.target.dataset.pay){
-        handleBtnPay();
-    }
 });
 
 function handleBtnComplete() {
     document.getElementById('modal-payout').classList.remove('hidden');
-    render();
-}
-
-function handleBtnPay() {
-    /* document.getElementById('modal-payout').classList.add('hidden'); */
     render();
 }
 
@@ -114,3 +106,10 @@ function render() {
 }
 
 render();
+
+if(new URLSearchParams(new URL(window.location).search).get('name')){
+    document.getElementById('success-container').classList.toggle('hidden');
+    setTimeout(function(){
+        document.getElementById('success-container').classList.toggle('hidden');
+    },5000);
+}

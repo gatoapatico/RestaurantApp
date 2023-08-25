@@ -33,19 +33,19 @@
             </div>
             <button class="btn-order" data-complete="complete">Complete order</button>
         </div>
-        <div class="container hidden">
+        <div class="container hidden" id="success-container">
             <div class="success-box">
                 <p>Thanks, James! Your order is on its way!</p>
             </div>
         </div>
     </main>
     <div class="modal-payout hidden" id="modal-payout">
-        <form action="#" class="form-payout">
+        <form action="#" class="form-payout" id="form-payout">
             <p class="title-payout">Enter card details</p>
-            <input class="input-f" type="text" pattern="[a-zA-Z]+" placeholder="Enter your name" required>
-            <input class="input-f" type="text" pattern="[0-9]{16}" placeholder="Enter card number" required>
-            <input class="input-f" type="text" pattern="[0-9]{3}" placeholder="Enter CVV" required>
-            <button class="btn-order mt40" data-pay="pay">Pay</button>
+            <input name="name" class="input-f" type="text" pattern="[a-zA-Z]+" placeholder="Enter your name" required>
+            <input name="card" class="input-f" type="text" pattern="[0-9]{16}" placeholder="Enter card number" required>
+            <input name="cvv" class="input-f" type="text" pattern="[0-9]{3}" placeholder="Enter CVV" required>
+            <button class="btn-order mt40">Pay</button>
         </form>
     </div>
     <script src="script.js" type="module"></script>
