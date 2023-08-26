@@ -1,8 +1,3 @@
-//Follow the design spec
-//Render the menu options using JavaScript
-//Be able to add/remove items
-//Have a payment modal with compulsary form inputs
-
 import { menuArray } from '/data.js';
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
@@ -103,13 +98,19 @@ function render() {
     else {
         document.getElementById('orders-container').classList.add('hidden');
     }
+
+    if(new URLSearchParams(new URL(window.location).search).get('name')){
+        const name = new URLSearchParams(new URL(window.location).search).get('name');
+        document.getElementById('success-container').innerHTML = `
+            <div class="success-box">
+                <p>Thanks, ${name}! Your order is on its way!</p>
+            </div>
+        `;
+        setTimeout(function(){
+            document.getElementById('success-container').innerHTML = '';
+        },5000);
+    }
 }
 
 render();
 
-if(new URLSearchParams(new URL(window.location).search).get('name')){
-    document.getElementById('success-container').classList.toggle('hidden');
-    setTimeout(function(){
-        document.getElementById('success-container').classList.toggle('hidden');
-    },5000);
-}
